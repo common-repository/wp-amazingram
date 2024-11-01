@@ -1,0 +1,99 @@
+/*	12 COLUMN : RESPONSIVE GRID SYSTEM
+	DEVELOPER : DENIS LEBLANC
+	URL : http://responsive.gs
+	VERSION : 3.0
+	LICENSE : GPL & MIT */
+
+
+/* 	SET ALL ELEMENTS TO BOX-SIZING : BORDER-BOX */
+* { 
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	/**behavior: url(/scripts/boxsizing.htc); */
+	/*	If you need support for IE7 and lower make 
+		sure the boxsizing.htc file is linked properly.
+		More info here:  https://github.com/Schepp/box-sizing-polyfill */
+}
+
+
+/*	MAIN CONTAINER 
+	Set the width to whatever you want the width of your site to be. */
+.aip_container {
+	max-width: 90%;
+	margin: 0 auto; 
+}
+
+
+
+/*	SELF CLEARING FLOATS - CLEARFIX METHOD */
+.aip_container:after,
+.aip_row:after,
+.aip_col:after,
+.clr:after, 
+.group:after { 
+	content: ""; 
+	display: table; 
+	clear: both; 
+}
+
+/* 	DEFAULT ROW STYLES 
+	Set bottom padding according to preference */
+.aip_row { padding-bottom: 0em;
+}
+			
+								  
+/* DEFAULT COLUMN STYLES */
+.aip_col {
+	display: block;
+	float: left;
+	width: 100%;
+        margin-left: 0px; 
+}
+
+@media ( min-width : 768px ) {
+	
+	.aip_gutters .aip_col {
+		margin-left: 2%;
+	}
+	
+	.aip_gutters .aip_col:first-child {
+		margin-left: 0; 
+	}
+}
+
+
+
+
+/*	COLUMN WIDTH ON DISPLAYS +768px 
+	You might need to play with media queries here to suite your design. */
+@media ( min-width : 768px ) {
+	.aip_width_1 { width: 8.33333333333%; }
+	.aip_width_2 { width: 16.6666666667%; }
+	.aip_width_3 { width: 25%; }
+	.aip_width_4 { width: 33.3333333333%; }
+	.aip_width_5 { width: 41.6666666667%; }
+	.aip_width_6 { width: 50%; }
+	.aip_width_7 { width: 58.3333333333%; }
+	.aip_width_8 { width: 66.6666666667%; }
+	.aip_width_9 { width: 75%; }
+	.aip_width_10 { width: 83.3333333333%; }
+	.aip_width_11 { width: 91.6666666667%; }
+	.aip_width_12 { width: 100%; }
+	.aip_width_38 { width: 38%; }
+        .aip_width_62 { width: 62%; }
+        
+        
+	.aip_gutters .aip_width_1 { width: 6.5%; }
+	.aip_gutters .aip_width_2 { width: 15.0%; }
+	.aip_gutters .aip_width_3 { width: 23.5%; }
+	.aip_gutters .aip_width_4 { width: 32.0%; }
+	.aip_gutters .aip_width_5 { width: 40.5%; }
+	.aip_gutters .aip_width_6 { width: 49.0%; }
+	.aip_gutters .aip_width_7 { width: 57.5%; }
+	.aip_gutters .aip_width_8 { width: 66.0%; }
+	.aip_gutters .aip_width_9 { width: 74.5%; }
+	.aip_gutters .aip_width_10 { width: 83.0%; }
+	.aip_gutters .aip_width_11 { width: 91.5%; }
+	.aip_gutters .aip_width_12 { width: 100%; }
+}
